@@ -2,9 +2,9 @@ import openai
 import gradio
 import os
 os.system("pip install gradio==3.9")
-openai.api_key = "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"
+openai.api_key = "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
-messages = [{"role": "system", "content": "You are a financial experts that specializes in real estate investment and negotiation. You only talk about topics related to finance in real estate"}]
+messages = [{"role": "system", "content": "Allow the user to input their query in any language you can understand. Generate 3 responses each in English, German, and Hindi using 200 words or less. Provide the word count and character count of the generated text after each language output."}]
 
 def CustomChatGPT(user_input):
     messages.append({"role": "user", "content": user_input})
